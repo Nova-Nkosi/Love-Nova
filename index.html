@@ -12,27 +12,50 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Georgia', serif;
-            background: #f0f0f0;
-            color: #1a2a4a;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Georgia', 'Times New Roman', serif;
+            background: #0d0c0b;
+            color: #a8a4a0;
+            line-height: 1.7;
             min-height: 100vh;
             display: flex;
             flex-direction: column;
         }
 
+        /* ===== NAVIGATION ===== */
         .navbar {
-            padding: 24px 32px;
+            padding: 32px 48px 20px;
             display: flex;
             justify-content: flex-end;
+            align-items: center;
             position: relative;
-            background: #1a1a1a;
+            border-bottom: 1px solid #1a1816;
+        }
+
+        .nav-left {
+            position: absolute;
+            left: 48px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        .nav-left .logo {
+            font-size: 14px;
+            font-weight: 400;
+            color: #6b6865;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-left .logo:hover {
+            color: #5a8aaa;
         }
 
         .hamburger {
             cursor: pointer;
-            width: 32px;
-            height: 24px;
+            width: 28px;
+            height: 20px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -41,22 +64,26 @@
 
         .hamburger span {
             width: 100%;
-            height: 2px;
-            background: #f0f0f0;
-            transition: all 0.3s;
+            height: 1.5px;
+            background: #a8a4a0;
+            transition: all 0.3s ease;
+        }
+
+        .hamburger:hover span {
+            background: #5a8aaa;
         }
 
         .menu {
             position: fixed;
             top: 0;
-            right: -280px;
-            width: 280px;
+            right: -320px;
+            width: 320px;
             height: 100%;
-            background: #1a1a1a;
-            box-shadow: -5px 0 30px rgba(0,0,0,0.3);
-            padding: 80px 32px;
-            transition: right 0.3s ease;
+            background: #1a1816;
+            padding: 80px 48px 48px;
+            transition: right 0.4s cubic-bezier(0.16, 1, 0.3, 1);
             z-index: 99;
+            border-left: 1px solid #2a2826;
         }
 
         .menu.active {
@@ -67,15 +94,26 @@
             display: block;
             text-decoration: none;
             font-size: 18px;
-            color: #f0f0f0;
-            margin-bottom: 28px;
-            font-weight: 400;
-            transition: color 0.2s;
-            letter-spacing: 0.5px;
+            color: #a8a4a0;
+            margin-bottom: 24px;
+            font-weight: 300;
+            letter-spacing: 1px;
+            transition: color 0.3s, transform 0.2s;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
         .menu a:hover {
-            color: #7ba3c7;
+            color: #5a8aaa;
+            transform: translateX(4px);
+        }
+
+        .menu .menu-label {
+            font-size: 11px;
+            color: #6b6865;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            margin-bottom: 32px;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
         .overlay {
@@ -84,10 +122,10 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0,0,0,0.5);
+            background: rgba(0, 0, 0, 0.6);
             opacity: 0;
             visibility: hidden;
-            transition: all 0.3s;
+            transition: all 0.4s ease;
             z-index: 98;
         }
 
@@ -96,6 +134,7 @@
             visibility: visible;
         }
 
+        /* ===== MAIN CONTENT ===== */
         .main {
             flex: 1;
             display: flex;
@@ -103,84 +142,128 @@
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 60px 24px;
-            background: #f0f0f0;
+            padding: 60px 24px 80px;
         }
 
-        .header {
-            margin-bottom: 60px;
+        .content-block {
+            max-width: 700px;
         }
 
-        .header h1 {
-            font-size: 72px;
+        .content-block .eyebrow {
+            font-size: 11px;
+            color: #6b6865;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        .content-block h1 {
+            font-size: 68px;
             font-weight: 300;
+            color: #f0eee8;
             letter-spacing: -2px;
-            color: #1a2a4a;
             margin-bottom: 16px;
+            line-height: 1.1;
         }
 
-        .header p {
-            font-size: 18px;
-            color: #1a2a4a;
-            opacity: 0.6;
+        .content-block h1 span {
+            color: #2a6a9c;
+        }
+
+        .content-block .subtitle {
+            font-size: 16px;
+            color: #6b6865;
             font-style: italic;
-            letter-spacing: 1px;
+            margin-bottom: 48px;
+            font-weight: 300;
         }
 
         .button-group {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 16px;
             align-items: center;
         }
 
         .btn {
             background: transparent;
-            border: 2px solid #1a2a4a;
-            padding: 16px 56px;
-            font-size: 16px;
-            font-weight: 500;
-            color: #1a2a4a;
+            border: 1px solid #2a2826;
+            padding: 14px 48px;
+            font-size: 13px;
+            font-weight: 400;
+            color: #a8a4a0;
             cursor: pointer;
-            transition: all 0.3s;
-            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            letter-spacing: 2px;
             text-decoration: none;
             display: inline-block;
             text-transform: uppercase;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            width: 220px;
+            text-align: center;
         }
 
-        .btn:hover {
-            background: #1a2a4a;
-            color: #f0f0f0;
+        .btn-primary {
+            border-color: #1a3a5c;
+            color: #5a8aaa;
+        }
+
+        .btn-primary:hover {
+            background: #1a3a5c;
+            color: #f0eee8;
+            border-color: #1a3a5c;
         }
 
         .btn-secondary {
-            border-color: #7ba3c7;
-            color: #7ba3c7;
+            border-color: #2a2826;
+            color: #6b6865;
         }
 
         .btn-secondary:hover {
-            background: #7ba3c7;
-            color: #1a1a1a;
+            border-color: #5a8aaa;
+            color: #5a8aaa;
+            background: rgba(26, 58, 92, 0.08);
         }
 
-        .footer {
-            text-align: center;
-            padding: 40px 24px;
-            color: #f0f0f0;
-            font-size: 13px;
-            letter-spacing: 0.5px;
-            background: #1a1a1a;
-            border-top: 1px solid #2a2a2a;
+        .divider-line {
+            width: 40px;
+            height: 1px;
+            background: #2a2826;
+            margin: 40px auto 32px;
         }
 
+        .footer-note {
+            font-size: 12px;
+            color: #3a3836;
+            letter-spacing: 1px;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        }
+
+        /* ===== RESPONSIVE ===== */
         @media (max-width: 700px) {
-            .header h1 {
-                font-size: 48px;
+            .navbar {
+                padding: 24px 24px 16px;
+            }
+            .nav-left {
+                left: 24px;
+            }
+            .content-block h1 {
+                font-size: 44px;
             }
             .btn {
-                padding: 14px 40px;
-                font-size: 14px;
+                width: 100%;
+                max-width: 280px;
+                padding: 14px 32px;
+                font-size: 12px;
+            }
+            .menu {
+                width: 280px;
+                padding: 64px 32px 32px;
+                right: -280px;
+            }
+            .menu a {
+                font-size: 16px;
             }
         }
     </style>
@@ -188,6 +271,9 @@
 <body>
 
     <div class="navbar">
+        <div class="nav-left">
+            <a href="index.html" class="logo">Love, Nova</a>
+        </div>
         <div class="hamburger" id="hamburger">
             <span></span>
             <span></span>
@@ -196,27 +282,27 @@
     </div>
 
     <div class="menu" id="menu">
+        <div class="menu-label">Navigate</div>
         <a href="who-is-nova.html">Who is Nova?</a>
         <a href="about.html">About</a>
-        <a href="poetry.html">Poetry</a>
         <a href="thoughts.html">Thoughts</a>
+        <a href="poetry.html">Poetry</a>
     </div>
 
     <div class="overlay" id="overlay"></div>
 
     <div class="main">
-        <div class="header">
-            <h1>Love, Nova</h1>
-            <p>words from a quiet mind</p>
+        <div class="content-block">
+            <div class="eyebrow">A quiet mind</div>
+            <h1>Love, <span>Nova</span></h1>
+            <div class="subtitle">words from a quiet mind</div>
+            <div class="button-group">
+                <a href="thoughts.html" class="btn btn-primary">Thoughts</a>
+                <a href="poetry.html" class="btn btn-secondary">Poetry</a>
+            </div>
+            <div class="divider-line"></div>
+            <div class="footer-note">© 2026</div>
         </div>
-        <div class="button-group">
-            <a href="thoughts.html" class="btn">Thoughts</a>
-            <a href="poetry.html" class="btn btn-secondary">Poetry</a>
-        </div>
-    </div>
-
-    <div class="footer">
-        <p>© Love, Nova 2026</p>
     </div>
 
     <script>
