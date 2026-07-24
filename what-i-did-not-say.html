@@ -5,146 +5,133 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>what i did not say — Love, Nova</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Georgia', serif;
-            background: #f0f0f0;
-            color: #1a2a4a;
-            line-height: 1.8;
+            font-family: -apple-system, BlinkMacSystemFont, 'Georgia', 'Times New Roman', serif;
+            background: #0d0c0b;
+            color: #a8a4a0;
+            line-height: 2;
+            min-height: 100vh;
         }
         .top-bar {
+            padding: 28px 48px 16px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 24px 32px;
-            border-bottom: 1px solid #d0d0d0;
-            background: #ffffff;
+            border-bottom: 1px solid #1a1816;
         }
         .back-link {
+            font-size: 13px;
+            color: #6b6865;
+            letter-spacing: 1px;
             text-decoration: none;
-            font-size: 16px;
-            color: #1a2a4a;
-            font-weight: 500;
+            transition: color 0.3s;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
         }
-        .back-link:hover {
-            color: #7ba3c7;
-        }
-        .logo {
-            font-size: 18px;
-            font-weight: 500;
-            color: #1a2a4a;
-            letter-spacing: 0.5px;
+        .back-link:hover { color: #b5737a; }
+        .nav-right {
+            font-size: 13px;
+            color: #3a3836;
+            letter-spacing: 1px;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
         }
         .container {
             max-width: 750px;
             margin: 0 auto;
-            padding: 60px 24px;
+            padding: 60px 24px 80px;
         }
-        h1 {
-            font-size: 48px;
-            font-weight: 300;
-            color: #1a2a4a;
-            margin-bottom: 15px;
-            letter-spacing: -0.5px;
+        .post-header {
+            margin-bottom: 48px;
+            border-bottom: 1px solid #1a1816;
+            padding-bottom: 32px;
         }
-        .date {
-            color: #1a2a4a;
-            opacity: 0.5;
-            margin-bottom: 40px;
+        .post-header .date {
+            font-size: 13px;
+            color: #6b6865;
             font-family: monospace;
-            font-size: 14px;
+            letter-spacing: 0.5px;
+            margin-bottom: 8px;
         }
-        .content {
-            font-size: 18px;
-            color: #1a2a4a;
+        .post-header h1 {
+            font-size: 42px;
+            font-weight: 300;
+            color: #f0eee8;
+            letter-spacing: -0.5px;
+            line-height: 1.2;
+        }
+        .post-content {
+            font-size: 17px;
+            color: #a8a4a0;
             line-height: 2;
         }
-        .content p {
-            margin-bottom: 12px;
-        }
+        .post-content p { margin-bottom: 12px; }
+        .post-content p:last-of-type { margin-bottom: 0; }
         .footer {
             text-align: center;
             padding: 40px 24px;
-            color: #f0f0f0;
-            font-size: 13px;
-            background: #1a1a1a;
-            border-top: 1px solid #2a2a2a;
+            color: #3a3836;
+            font-size: 12px;
+            border-top: 1px solid #1a1816;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            letter-spacing: 1px;
         }
         @media (max-width: 700px) {
-            .top-bar {
-                padding: 20px;
-            }
-            h1 {
-                font-size: 34px;
-            }
-            .content {
-                font-size: 16px;
-            }
-            .container {
-                padding: 40px 20px;
-            }
+            .top-bar { padding: 20px 24px 12px; flex-direction: column; gap: 8px; }
+            .post-header h1 { font-size: 32px; }
+            .container { padding: 40px 20px 60px; }
+            .post-content { font-size: 16px; }
         }
     </style>
 </head>
 <body>
-
-<div class="top-bar">
-    <a href="poetry.html" class="back-link">← back to poetry</a>
-    <div class="logo">Love, Nova</div>
-</div>
-
-<div class="container">
-    <h1>what i did not say</h1>
-    <div class="date">June 12, 2026</div>
-    <div class="content">
-
-        <p>i sat across from you<br>
-        and swallowed every word<br>
-        that should have left my mouth<br>
-        like arrows</p>
-
-        <p>i let you talk<br>
-        because that was easier<br>
-        than telling you<br>
-        what i knew</p>
-
-        <p>the truth sat between us<br>
-        like a third person<br>
-        silent, waiting<br>
-        watching you perform</p>
-
-        <p>i did not say<br>
-        that i saw through you<br>
-        that i knew what you were doing<br>
-        that i was not fooled</p>
-
-        <p>i did not say<br>
-        that you were small<br>
-        that your cruelty was not power<br>
-        but fear</p>
-
-        <p>i let you believe<br>
-        that you had won<br>
-        because sometimes<br>
-        silence is the only weapon</p>
-
-        <p>and i walked away<br>
-        with all my words intact<br>
-        knowing you had lost<br>
-        without ever knowing it</p>
-
-        <p>— Nova</p>
-
+    <div class="top-bar">
+        <a href="poetry.html" class="back-link">← Back</a>
+        <div class="nav-right">Love, Nova</div>
     </div>
-</div>
+    <div class="container">
+        <div class="post-header">
+            <div class="date">June 12, 2026</div>
+            <h1>what i did not say</h1>
+        </div>
+        <div class="post-content">
+            <p>i sat across from you<br>
+            and swallowed every word<br>
+            that should have left my mouth<br>
+            like arrows</p>
 
-<div class="footer">
-    <p>© Love, Nova 2026</p>
-</div>
+            <p>i let you talk<br>
+            because that was easier<br>
+            than telling you<br>
+            what i knew</p>
 
+            <p>the truth sat between us<br>
+            like a third person<br>
+            silent, waiting<br>
+            watching you perform</p>
+
+            <p>i did not say<br>
+            that i saw through you<br>
+            that i knew what you were doing<br>
+            that i was not fooled</p>
+
+            <p>i did not say<br>
+            that you were small<br>
+            that your cruelty was not power<br>
+            but fear</p>
+
+            <p>i let you believe<br>
+            that you had won<br>
+            because sometimes<br>
+            silence is the only weapon</p>
+
+            <p>and i walked away<br>
+            with all my words intact<br>
+            knowing you had lost<br>
+            without ever knowing it</p>
+
+            <p>— Nova</p>
+        </div>
+    </div>
+    <div class="footer"><p>© Love, Nova 2026</p></div>
 </body>
 </html>
