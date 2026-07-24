@@ -12,118 +12,167 @@
         }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Georgia', serif;
-            background: #f0f0f0;
-            color: #1a2a4a;
+            font-family: -apple-system, BlinkMacSystemFont, 'Georgia', 'Times New Roman', serif;
+            background: #0d0c0b;
+            color: #a8a4a0;
             line-height: 1.7;
+            min-height: 100vh;
         }
 
-        .top-bar {
+        .navbar {
+            padding: 28px 48px 16px;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 24px 32px;
-            border-bottom: 1px solid #d0d0d0;
-            background: #ffffff;
+            border-bottom: 1px solid #1a1816;
         }
 
-        .back-link {
+        .nav-left a {
+            font-size: 13px;
+            color: #6b6865;
+            letter-spacing: 1px;
             text-decoration: none;
-            font-size: 16px;
-            color: #1a2a4a;
-            font-weight: 500;
+            transition: color 0.3s;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
-        .back-link:hover {
-            color: #7ba3c7;
+        .nav-left a:hover {
+            color: #5a8aaa;
         }
 
-        .logo {
-            font-size: 18px;
-            font-weight: 500;
-            color: #1a2a4a;
-            letter-spacing: 0.5px;
+        .nav-right {
+            font-size: 13px;
+            color: #3a3836;
+            letter-spacing: 1px;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
         }
 
         .container {
             max-width: 800px;
             margin: 0 auto;
-            padding: 60px 24px;
+            padding: 60px 24px 80px;
         }
 
-        h1 {
-            font-size: 52px;
-            font-weight: 300;
-            color: #1a2a4a;
-            margin-bottom: 16px;
-            letter-spacing: -1px;
+        .header {
+            margin-bottom: 60px;
+            border-bottom: 1px solid #1a1816;
+            padding-bottom: 32px;
         }
 
-        .subhead {
-            font-size: 16px;
-            color: #1a2a4a;
-            opacity: 0.6;
-            margin-bottom: 56px;
-            font-style: italic;
-        }
-
-        .post-list {
-            list-style: none;
-        }
-
-        .post-item {
-            margin-bottom: 32px;
-            padding-bottom: 24px;
-            border-bottom: 1px solid #d0d0d0;
-        }
-
-        .post-item:last-child {
-            border-bottom: none;
-        }
-
-        .post-title {
-            font-size: 24px;
-            font-weight: 400;
+        .header .label {
+            font-size: 11px;
+            color: #6b6865;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
             margin-bottom: 8px;
         }
 
-        .post-title a {
-            text-decoration: none;
-            color: #1a2a4a;
-            transition: color 0.2s;
+        .header h1 {
+            font-size: 48px;
+            font-weight: 300;
+            color: #f0eee8;
+            letter-spacing: -1px;
         }
 
-        .post-title a:hover {
-            color: #7ba3c7;
+        .header h1 span {
+            color: #2a6a9c;
         }
 
-        .post-date {
-            font-size: 13px;
-            color: #1a2a4a;
-            opacity: 0.5;
+        .header p {
+            font-size: 16px;
+            color: #6b6865;
+            margin-top: 8px;
+            font-style: italic;
+        }
+
+        .post-item {
+            padding: 32px 0;
+            border-bottom: 1px solid #1a1816;
+            transition: padding-left 0.3s ease;
+        }
+
+        .post-item:hover {
+            padding-left: 12px;
+        }
+
+        .post-item .date {
+            font-size: 12px;
+            color: #6b6865;
             font-family: monospace;
+            letter-spacing: 0.5px;
+            margin-bottom: 6px;
+        }
+
+        .post-item .title {
+            font-size: 22px;
+            font-weight: 400;
+            color: #f0eee8;
+            margin-bottom: 4px;
+        }
+
+        .post-item .title a {
+            text-decoration: none;
+            color: #f0eee8;
+            transition: color 0.3s;
+        }
+
+        .post-item .title a:hover {
+            color: #5a8aaa;
+        }
+
+        .post-item .excerpt {
+            font-size: 15px;
+            color: #6b6865;
+            line-height: 1.6;
+            margin-top: 4px;
+        }
+
+        .post-item .read-link {
+            display: inline-block;
+            margin-top: 10px;
+            font-size: 12px;
+            color: #5a8aaa;
+            text-decoration: none;
+            letter-spacing: 0.5px;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            transition: color 0.3s;
+        }
+
+        .post-item .read-link:hover {
+            color: #2a6a9c;
+        }
+
+        .empty-state {
+            color: #6b6865;
+            text-align: center;
+            padding: 60px 0;
+            font-style: italic;
         }
 
         .footer {
             text-align: center;
             padding: 40px 24px;
-            color: #f0f0f0;
-            font-size: 13px;
-            background: #1a1a1a;
-            border-top: 1px solid #2a2a2a;
+            color: #3a3836;
+            font-size: 12px;
+            border-top: 1px solid #1a1816;
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            letter-spacing: 1px;
         }
 
         @media (max-width: 700px) {
-            .top-bar {
-                padding: 20px;
+            .navbar {
+                padding: 20px 24px 12px;
+                flex-direction: column;
+                gap: 8px;
             }
-            h1 {
-                font-size: 38px;
+            .header h1 {
+                font-size: 34px;
             }
             .container {
-                padding: 40px 20px;
+                padding: 40px 20px 60px;
             }
-            .post-title {
+            .post-item .title {
                 font-size: 20px;
             }
         }
@@ -131,16 +180,22 @@
 </head>
 <body>
 
-    <div class="top-bar">
-        <a href="index.html" class="back-link">← home</a>
-        <div class="logo">Love, Nova</div>
+    <div class="navbar">
+        <div class="nav-left">
+            <a href="index.html">← Home</a>
+        </div>
+        <div class="nav-right">Love, Nova</div>
     </div>
 
     <div class="container">
-        <h1>Thoughts</h1>
-        <div class="subhead">essays, reflections, and quiet opinions</div>
-        <div class="post-list" id="postList">
-            <div style="color: #1a2a4a; opacity: 0.5;">loading...</div>
+        <div class="header">
+            <div class="label">Essays & Reflections</div>
+            <h1>Thoughts</h1>
+            <p>quiet opinions from a quiet mind</p>
+        </div>
+
+        <div id="postsContainer">
+            <div class="empty-state">Loading...</div>
         </div>
     </div>
 
@@ -153,59 +208,67 @@
             {
                 title: "The Real World Does Not Care About Your Feelings",
                 date: "June 22, 2026",
+                excerpt: "We were sold a lie. That if we worked hard, we would succeed. That if we followed the rules, the rules would protect us. That being a good person was enough.",
                 filename: "the-real-world.html"
             },
             {
                 title: "Law & Order: SVU and the Culture of Witnessing",
                 date: "June 22, 2026",
+                excerpt: "There is a moment in almost every episode that stays with me. It is the moment when someone finally tells the truth. And someone listens.",
                 filename: "law-and-order-svu.html"
             },
             {
                 title: "The Weight of Knowing",
                 date: "June 20, 2026",
+                excerpt: "I was young when I first realized that the world was not fair. Once you see it, you cannot unsee it.",
                 filename: "the-weight-of-knowing.html"
             },
             {
                 title: "The NSFAS Living Allowance Debate",
                 date: "June 14, 2026",
+                excerpt: "Tuition paid. Accommodation paid. Textbooks paid. R1700 is for transport and food. Let us be honest about what the NSFAS allowance actually covers.",
                 filename: "the-nsfas-living-allowance-debate.html"
             },
             {
                 title: "What Did You Gain?",
                 date: "June 10, 2026",
+                excerpt: "I trusted my best friend with my truth. He turned it into a weapon. This is what I lost. And what I found.",
                 filename: "what-did-you-gain.html"
             },
             {
                 title: "The Language of Money",
                 date: "March 20, 2026",
+                excerpt: "I study accounting. I also write code. People ask me why. To me, they are the same thing.",
                 filename: "the-language-of-money.html"
             },
             {
                 title: "First Light",
                 date: "March 15, 2026",
+                excerpt: "Every journey begins with a single step. This is the start of something honest. Just me, my thoughts, and the page.",
                 filename: "first-light.html"
             }
         ];
 
-        const postList = document.getElementById('postList');
-        
+        const container = document.getElementById('postsContainer');
+
         function loadPosts() {
             if (posts.length === 0) {
-                postList.innerHTML = '<div style="color: #1a2a4a; opacity: 0.5;">No thoughts yet. Come back soon.</div>';
+                container.innerHTML = '<div class="empty-state">No thoughts yet. Come back soon.</div>';
                 return;
             }
 
-            let html = '<ul class="post-list">';
+            let html = '';
             for (let post of posts) {
                 html += `
-                    <li class="post-item">
-                        <div class="post-title"><a href="${post.filename}">${escapeHtml(post.title)}</a></div>
-                        <div class="post-date">${escapeHtml(post.date)}</div>
-                    </li>
+                    <div class="post-item">
+                        <div class="date">${post.date}</div>
+                        <div class="title"><a href="${post.filename}">${post.title}</a></div>
+                        <div class="excerpt">${post.excerpt}</div>
+                        <a href="${post.filename}" class="read-link">Read more →</a>
+                    </div>
                 `;
             }
-            html += '</ul>';
-            postList.innerHTML = html;
+            container.innerHTML = html;
         }
 
         function escapeHtml(text) {
